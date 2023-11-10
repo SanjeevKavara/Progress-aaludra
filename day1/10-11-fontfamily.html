@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friday</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        .font-test {
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            border: 2px black solid;
+            padding: 5px;
+            margin: 5px;
+            font-size: 2em;
+
+        }
+
+        .alldiv {
+            height: 100px;
+            width: 100px;
+            border: 3px black solid;
+            margin: 5px;
+            padding: 2px;
+
+        }
+
+        .div1 {
+            background-color: red;
+            box-shadow: 5px 5px 5px #282727ae;
+
+
+        }
+
+        .div2 {
+            background-color: #00ff00;
+            box-shadow: 5px 5px 5px #282727ae;
+
+        }
+
+        .div3 {
+            background-color: #0000ff;
+            box-shadow: 5px 5px 5px #282727ae;
+
+        }
+
+        .div4 {
+            background-color: #ffff00;
+            box-shadow: 5px 5px 5px #282727ae;
+
+        }
+
+        .overalldiv {
+            display: inline-flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .overalldiv2 {
+            display: inline-flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .outer-div {
+            justify-content: center;
+            display: flex;
+        }
+
+
+        body {
+            background-color: rgba(128, 128, 128, 0.687);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="font-test">We can change the font of this element by selecting this element by class or id</div>
+    <div class="outer-div">
+        <div class="overalldiv">
+            <div class="alldiv div1"></div>
+            <div class="alldiv div2"></div>
+        </div>
+        <div class="overalldiv2">
+            <div class="alldiv div3"></div>
+            <div class="alldiv div4"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

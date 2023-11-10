@@ -1,0 +1,15 @@
+div {
+    background-color: chocolate;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px;
+
+    display: inline-block;
+    /* it is used to make the element inline while giving the ability to change the margin and width */
+
+    /* if parents font size in 10px and childs font size is 2em then it means font size of the child will be double of the parent which is 20px */
+}
