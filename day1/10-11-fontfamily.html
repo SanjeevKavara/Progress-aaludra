@@ -74,12 +74,19 @@
             justify-content: center;
             display: flex;
         }
+        .fixed-pos{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin: 5px;
+        }
 
 
         body {
             background-color: rgba(128, 128, 128, 0.687);
         }
     </style>
+    <script src="https://kit.fontawesome.com/b295c53cb8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -94,7 +101,12 @@
             <div class="alldiv div4"></div>
         </div>
     </div>
-
+    <div class="fixed-pos">
+        <i class="fa-brands fa-facebook fa-xl fa-fade" style="color: #0f56d2;"></i>
+        <i class="fa-brands fa-linkedin fa-fade fa-xl"></i>
+        <i class="fa-brands fa-instagram fa-fade fa-xl"></i>
+    </div>
+<!-- z-index positive (1/2/3) means in will be priortized for overlapping and z-index negative means it will be priortised for underlapping (-1/-2/-3) -->
 </body>
 
 </html>
