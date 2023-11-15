@@ -21,7 +21,10 @@
             left: 20px;
             z-index: 1;
             background-image: url(water.jpg);
+            transition-property: all;
             background-size: cover;
+            transition: 2s;
+            transition-timing-function: ease-in;
 
 
         }
@@ -35,6 +38,8 @@
             z-index: 4;
             background-image: url(land.jpg);
             background-size: cover;
+            transition: 2s;
+            transition-timing-function: ease-in;
 
         }
 
@@ -45,6 +50,8 @@
             background-image: url(dune.jpg);
             background-size: cover;
             color: aliceblue;
+            transition: 2s;
+            transition-timing-function: ease-in;
 
         }
 
@@ -59,6 +66,8 @@
             color: aliceblue;
             /* filter: brightness(0.7); */
             opacity: 0.8;
+            transition: 2s;
+            transition-timing-function: ease-in;
             
 
         }
@@ -80,12 +89,15 @@
         .outer-div {
             justify-content: center;
             display: flex;
-            width: 500px;
+           
             height: 500px;
             align-items: center;
+            border: 2px solid black;
+            
             
         }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="outer-div">
@@ -97,6 +109,13 @@
             <div class="alldiv div3">z-index 2</div>
             <div class="alldiv div4">z-index 3</div>
         </div>
+    </div>
+
+    <div class="outer-container">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
     </div>
 </body>
 </html>

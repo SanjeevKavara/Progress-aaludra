@@ -1,4 +1,4 @@
-div {
+/* div {
     background-color: chocolate;
     margin: 5px;
     width: 100px;
@@ -11,5 +11,112 @@ div {
     display: inline-block;
     /* it is used to make the element inline while giving the ability to change the margin and width */
 
-    /* if parents font size in 10px and childs font size is 2em then it means font size of the child will be double of the parent which is 20px */
+/* if parents font size in 10px and childs font size is 2em then it means font size of the child will be double of the parent which is 20px */
+
+
+
+
+.outer-container {
+    border: 3px solid black;
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    height: 40vh;
+
+}
+
+.outer-container>div {
+    border: 2px solid black;
+    margin: 4px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.box2 {
+    align-self: center;
+    background-color: rgb(30, 210, 81);
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+
+}
+
+.box4 {
+    align-self: center;
+    background-color: #1ed251;
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+.box1,
+.box3 {
+    background-color: aqua;
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+.box2:hover {
+    background-color: aqua;
+    font-size: 2em;
+}
+
+.box4:hover {
+    background-color: aqua;
+    font-size: 2em;
+}
+
+.box1:active {
+    background-color: #1ed251;
+    font-size: 2em;
+
+}
+
+.box3:active {
+    background-color: #1ed251;
+    font-size: 2em;
+}
+
+
+
+.div1:hover {
+
+    animation-name: scaling;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+
+.div2:hover {
+    animation-name: scaling;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+
+}
+
+.div3:hover {
+    animation-name: scaling;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+
+}
+
+.div4:hover {
+    animation-name: scaling;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+
+}
+
+@keyframes scaling {
+    from {
+        height: 100px;
+        width: 100px;
+    }
+
+    to {
+        transform: scale(2);
+        z-index: 6;
+    }
+
 }
