@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <style>
+        .loader{
+           
+            width: 200px;
+            height: 200px;
+            border-top: 5px solid black;
+            border-radius: 50%;
+            /* animation: loader-ani 1s ease-in 0s infinite normal fill-mode; */
+            animation-name: loader-ani;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            
+           
+        }
+
+        .loader-outer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @keyframes loader-ani {
+            from {
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+            
+        }
+    </style>
+</head>
+<body class="loader-outer">
+    <div class="loader"></div>
+</body>
+</html>
