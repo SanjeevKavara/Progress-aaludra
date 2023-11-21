@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Flex and Grid</title>
+    <style>
+        .flex-area {
+            display: flex;
+            gap: 8px;
+            /* justify-content: center; */
+            align-items: center;
+            height: 30vh;
+            border: 5px dashed black;
+            flex-wrap: wrap;
+            padding: 2px;
+        }
+
+        .item {
+            border: 2px solid red;
+            flex: 1;
+            width: 50px;
+            height: 80%;
+
+
+            justify-content: center;
+
+            background-color: aqua;
+            display: flex;
+            box-shadow: 5px 5px 4px;
+
+        }
+
+        .card1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+
+        }
+
+        .grid-area {
+            display: grid;
+            border: 3px solid red;
+            gap: 4px;
+            /* grid-template-columns: 100px 100px 100px; */
+            grid-template-areas: "heading heading heading"
+                "img1 img2 img3"
+                "img4 img5 img6";
+            height: 70vh;
+            grid-template-rows: 2fr 4fr 4fr;
+            padding: 3px;
+            background-color: red;
+        }
+
+        .gitem {
+            border: 2px solid red;
+        }
+
+        .grid1 {
+            grid-area: heading;
+            justify-content: center;
+            display: grid;
+            align-items: center;
+            background-color: greenyellow;
+
+        }
+
+        .grid2 {
+            grid-area: img1;
+            background-image: url(g1.jpg);
+            background-size: cover;
+        }
+
+        .grid3 {
+            grid-area: img2;
+            background-image: url(g2.jpg);
+            background-size: cover;
+        }
+
+        .grid4 {
+            grid-area: img3;
+            background-image: url(g3.jpg);
+            background-size: cover;
+        }
+
+        .grid5 {
+            grid-area: img4;
+            background-image: url(g4.jpg);
+            background-size: cover;
+        }
+
+        .grid6 {
+            grid-area: img5;
+            background-image: url(g5.jpg);
+            background-size: cover;
+            grid-row: 1/4;
+        }
+
+        .grid7 {
+            grid-area: img6;
+            background-image: url(g6.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-area">
+        <div class="item">
+            <div class="card1">
+                <div>header</div>
+                <div>content</div>
+                <div>footer</div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card1">
+                <div>header</div>
+                <div>content</div>
+                <div>footer</div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card1">
+                <div>header</div>
+                <div>content</div>
+                <div>footer</div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card1">
+                <div>header</div>
+                <div>content</div>
+                <div>footer</div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card1">
+                <div>header</div>
+                <div>content</div>
+                <div>footer</div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card1">
+                <div>header</div>
+                <div>content</div>
+                <div>footer</div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <br>
+    <br>
+
+    <div class="grid-area">
+        <div class="grid1 gitem">
+           
+        </div>
+        <div class="grid2 gitem"></div>
+        <div class="grid3 gitem"></div>
+        <div class="grid4 gitem"></div>
+        <div class="grid5 gitem"></div>
+        <div class="grid6 gitem"></div>
+        <div class="grid7 gitem"></div>
+    </div>
+
+
+</body>
+
+</html>

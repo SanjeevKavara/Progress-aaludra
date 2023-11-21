@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid-box {
+            display: grid;
+            height: 50vh;
+            border: 3px solid black;
+            /* grid-template-columns: 200px 200px;
+            grid-template-rows: 100px  200px; */
+            grid-template-areas: "nav nav nav nav"
+                "sidebar article article rsidebar"
+                "footer footer footer footer";
+
+            /* the template areas should be adjacent, it can be column or row wise , not repeated again in another column after some different content */
+
+            grid-template-columns: 100px 200px;
+            grid-template-rows: 1fr 2fr 0.5fr;
+            /* row-gap: 5px;
+            column-gap: 5px; */
+            gap: 5px;
+            padding: 4px;
+        }
+
+        .item {
+            border: 2px dashed red;
+
+            text-align: center;
+        }
+
+        .item-1 {
+            grid-area: nav;
+            background-color: rgba(68, 68, 253, 0.765);
+            
+
+        }
+
+        .item-2 {
+            grid-area: sidebar;
+            background-color: red;
+            grid-row: 2/3;
+
+
+        }
+
+        .item-3 {
+            grid-area: article;
+            background-color: yellow;
+
+        }
+
+        .item-4 {
+            grid-area: footer;
+            background-color: gray;
+        }
+
+        .item-5 {
+            grid-area: rsidebar;
+            background-color: green;
+        }
+
+
+        /* .item-4{
+            grid-row: 1/2;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="grid-box">
+        <div class="item item-1">Nav</div>
+        <div class="item item-2">Sidebar</div>
+        <div class="item item-3">Article</div>
+        <div class="item item-4">Footer</div>
+        <div class="item item-5">Ads</div>
+    </div>
+    <br>
+
+</body>
+
+</html>
