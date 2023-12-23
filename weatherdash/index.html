@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Weather Dashboard</h1>
+    <div class="container">
+        <div class="weather-input">
+            <h3>Enter a City Name</h3>
+            <input class="city-input" type="text" placeholder="New york, London...." id="">
+            <button class="search-btn">Search</button>
+            <div class="separator"></div>
+            <button class="location-btn">Use Current location</button>
+
+        </div>
+        <div class="weather-data">
+            <div class="current-weather">
+                <div class="details">
+                    <h2 class="cityanddate">London (2023-06-19)</h2>
+                    <h4 class="temp">Temperature:19.c</h4>
+                    <h4 class="wind">Wind: 4.31 M/S</h4>
+                    <h4 class="humidity">Humidity: 79%</h4>
+                </div>
+                <div class="icon">
+                    <img src="./rain.png" id="rain-img" alt="" srcset="" class="iconss">
+                    <h4 class="weather">Moderate rain</h4>
+                </div>
+            </div>
+            <!-- <div class="days-forecast">
+                <h2>5-Day forecast</h2>
+                <ul class="weather-cards">
+                    <li class="card">
+                        <h3>(2023-06-19)</h3>
+                        <h4>Temperature:19.10°C</h4>
+                        <h4>wind: 4.31 M/S</h4>
+                        <h4>Humidity:79%</h4>
+                    </li>
+                </ul>
+
+            </div> -->
+           
+        </div>
+        
+    </div>
+    <div class="flex">
+        <div class="card">
+           <h4> (___)</h4>
+            <h4>Temp:(___) °C</h4>
+            <h4>Humidity:(___)%</h4>
+        </div>
+       
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
