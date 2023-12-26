@@ -26,15 +26,15 @@ function weatherCards(arr) {
         </div>`
     })
 
-    arr.map((x) => {
+    // arr.map((x) => {
 
-        console.log(x)
-    })
+    //     console.log(x)
+    // })
 }
 
 
 
-const getWeatherDetails = async (lat, lon) => {
+const getWeatherDetails = async (name,lat, lon) => {
     const sevenDay = [];
     const WEATHER_API_URL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
     await fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
@@ -44,8 +44,8 @@ const getWeatherDetails = async (lat, lon) => {
         humidity.innerHTML = 'Humidity: ' + data.list[0].main.humidity + ' %';
         weather.innerHTML = data.list[0].weather[0].main;
         document.querySelector('.iconss').src = `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`
-        // console.log(data)
-        let cntr = 5;
+        // console.log(data) //data console.log
+        let cntr = 6;
         for (let i = 0; i < 6; i++) { //getting weather data for 5 days
             if (cntr <= data.list.length)
                 sevenDay.push(data.list[cntr])
@@ -80,7 +80,7 @@ const getCityCoordinates = () => {
         // console.log(data)
         const { name, lat, lon } = data[0];
         // console.log(name, lat, lon);
-        getWeatherDetails(lat, lon);
+        getWeatherDetails(cityName,lat, lon);
 
     }).catch(() => {
         alert("an error occured while fetching the coordinates")
@@ -91,7 +91,18 @@ const getUserCoordinates = () => {
     navigator.geolocation.getCurrentPosition( //for getting user's current location
         position => {
             const { latitude, longitude } = position.coords;
-            getWeatherDetails(latitude, longitude)
+            const REVERSE_GEOCODING_URL = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_KEY}`
+            fetch(REVERSE_GEOCODING_URL).then(res => res.json()).then(data => {
+                // console.log(data)
+
+                const { name } = data[0];
+
+                getWeatherDetails(name,latitude, longitude);
+
+            }).catch(() => {
+                alert("an error occured while fetching the city")
+            })
+            
         },
         error => {
             if (error.code === error.PERMISSION_DENIED) {
