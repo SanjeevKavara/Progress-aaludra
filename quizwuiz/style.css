@@ -1,0 +1,51 @@
+.outline{
+    border-style: solid;
+    border-color: powderblue;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: powderblue;
+    filter: opacity(0.8);
+    backdrop-filter: blur(3px);
+    
+}
+
+h1{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.flex{
+     display: flex;
+    justify-content: space-between;
+     flex-direction: column;
+     height: auto;
+  
+   
+}
+
+.name{
+    margin: 4px;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 40.25rem;
+    background: linear-gradient(115deg, rgba(201, 67, 132, 0.8), rgba(68, 119, 206,0.5)), url(./4people.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input{
+   margin-bottom: 5px;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+button{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:lavenderblush;
+}
