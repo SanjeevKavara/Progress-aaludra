@@ -2,6 +2,11 @@
 
 const nextPage = () => {
     let player = document.getElementById('player').value;
+    if(player=="")
+    {
+        alert('Enter valid name')
+        return
+    }
     
     localStorage.setItem('name',player);
     if(localStorage.getItem('leaderboard')==null)

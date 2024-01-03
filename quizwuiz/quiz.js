@@ -1,4 +1,4 @@
-// import player from './script'
+
 
 //Question bank
 let questionBank = [
@@ -43,7 +43,7 @@ let i = 0;
 let score = 0;
 
 
-
+//Shuffle the option array
 const shuffle = (array) => {
     return array.sort(() => Math.random() - 0.5);
 };
@@ -51,11 +51,6 @@ const shuffle = (array) => {
 //function to display questions
 const displayQuestion = (questionBank) => {
 
-
-
-    // for (var a = 0; a < span.length; a++) {
-    //     span[a].style.background = 'none';
-    // }
 
     span.forEach(x => {
         x.style.background = 'none'
@@ -81,7 +76,7 @@ const currObj = {
 }
 //storing the users
 const userinfo = localStorage.getItem('leaderboard')
-const users = JSON.parse(userinfo);
+const users = JSON.parse(userinfo); //string to JSON
 
 //function to calculate scores
 function calcScore(e) {
